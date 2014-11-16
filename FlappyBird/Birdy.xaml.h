@@ -14,5 +14,9 @@ namespace FlappyBird
 	{
 	public:
 		Birdy();
+
+	private:
+		void Life();
+		void OnTick(Platform::Object ^sender, Platform::Object ^args);
 	};
 }
