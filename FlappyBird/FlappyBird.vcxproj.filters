@@ -28,11 +28,13 @@
     <ClCompile Include="App.xaml.cpp" />
     <ClCompile Include="MainPage.xaml.cpp" />
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Birdy.xaml.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h" />
     <ClInclude Include="MainPage.xaml.h" />
+    <ClInclude Include="Birdy.xaml.h" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />
@@ -43,9 +45,13 @@
   <ItemGroup>
     <Page Include="MainPage.xaml" />
     <Page Include="Birdy.xaml" />
+    <Page Include="IncommingThing.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Birdy.gif">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Bird_01.gif">
       <Filter>Assets</Filter>
     </Image>
   </ItemGroup>

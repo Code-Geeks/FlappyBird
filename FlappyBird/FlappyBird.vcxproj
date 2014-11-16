@@ -134,6 +134,9 @@
     <ClInclude Include="Birdy.xaml.h">
       <DependentUpon>Birdy.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="IncommingThing.xaml.h">
+      <DependentUpon>IncommingThing.xaml</DependentUpon>
+    </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -149,6 +152,9 @@
     <Page Include="Birdy.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="IncommingThing.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -161,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Birdy.gif" />
+    <Image Include="Assets\Bird_01.gif" />
     <Image Include="Assets\Logo.scale-100.png" />
     <Image Include="Assets\SmallLogo.scale-100.png" />
     <Image Include="Assets\StoreLogo.scale-100.png" />
@@ -172,6 +179,9 @@
     </ClCompile>
     <ClCompile Include="Birdy.xaml.cpp">
       <DependentUpon>Birdy.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="IncommingThing.xaml.cpp">
+      <DependentUpon>IncommingThing.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="MainPage.xaml.cpp">
       <DependentUpon>MainPage.xaml</DependentUpon>
