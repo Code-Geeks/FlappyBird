@@ -5,6 +5,7 @@
 
 #include "pch.h"
 #include "Birdy.xaml.h"
+#include <ppltasks.h>
 
 using namespace FlappyBird;
 
@@ -25,6 +26,9 @@ Birdy::Birdy()
 {
 	InitializeComponent();
 
+	FlapTimer = ref new DispatcherTimer();
+	FlapTimer->Tick += ref new Windows::Foundation::EventHandler<Platform::Object ^>(this, &FlappyBird::Birdy::OnFlap);
+
 	Life();
 }
 
@@ -38,6 +42,12 @@ void Birdy::Life()
 	timer->Start();
 }
 
+void Birdy::Flap()
+{
+	if (FlapTimer->IsEnabled == false)
+		FlapTimer->Start();
+}
+
 void Birdy::OnTick(Object ^sender, Object ^args)
 {
 	auto currentWindow = Window::Current;
@@ -48,4 +58,29 @@ void Birdy::OnTick(Object ^sender, Object ^args)
 
 	if (birdTop < maxTop)
 		Canvas::SetTop(this, Canvas::GetTop(this) + 3);
+}
+
+void Birdy::OnFlap(Object ^sender, Object ^args)
+{
+	static int i;
+
+	if (i >= 0 && i < 10)
+	{
+		auto y = i == 0 ? 45.0 : i == 1 ? 20.0 : i == 2 ? 15.0 : i == 3 ? 10.0 : i == 4 ? 5.0 : 2.0;
+		y = Height * y / 100.0;
+
+		Canvas::SetTop(this, Canvas::GetTop(this) - y);
+	}
+	else
+	{
+		if (i < 30)
+			Canvas::SetTop(this, Canvas::GetTop(this) + 1);
+	}
+
+	i++;
+	if (i == 30)
+	{
+		FlapTimer->Stop();
+		i = 0;
+	}
 }

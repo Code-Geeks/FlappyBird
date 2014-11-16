@@ -7,6 +7,8 @@
 
 #include "Birdy.g.h"
 
+using Windows::UI::Xaml::DispatcherTimer;
+
 namespace FlappyBird
 {
 	[Windows::Foundation::Metadata::WebHostHidden]
@@ -15,8 +17,14 @@ namespace FlappyBird
 	public:
 		Birdy();
 
+	internal:
+		void Flap();
+
 	private:
+		DispatcherTimer ^FlapTimer;
+
 		void Life();
 		void OnTick(Platform::Object ^sender, Platform::Object ^args);
+		void OnFlap(Platform::Object ^sender, Platform::Object ^args);
 	};
 }
