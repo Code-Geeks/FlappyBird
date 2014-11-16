@@ -57,7 +57,7 @@ void Birdy::OnTick(Object ^sender, Object ^args)
 	auto birdTop = Canvas::GetTop(this);
 
 	if (birdTop < maxTop)
-		Canvas::SetTop(this, Canvas::GetTop(this) + 3);
+		Top += 3;
 }
 
 void Birdy::OnFlap(Object ^sender, Object ^args)
@@ -69,12 +69,11 @@ void Birdy::OnFlap(Object ^sender, Object ^args)
 		auto y = i == 0 ? 45.0 : i == 1 ? 20.0 : i == 2 ? 15.0 : i == 3 ? 10.0 : i == 4 ? 5.0 : 2.0;
 		y = Height * y / 100.0;
 
-		Canvas::SetTop(this, Canvas::GetTop(this) - y);
+		Top -= y;
 	}
 	else
 	{
-		if (i < 30)
-			Canvas::SetTop(this, Canvas::GetTop(this) + 1);
+		if (i < 30)	Top++;
 	}
 
 	i++;
