@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>6c553250-b1d5-4a31-acf4-2a7213ad4d7d</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>46a768e2-4b16-4bf2-9103-14379a1d81c6</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Image Include="Assets\Logo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
